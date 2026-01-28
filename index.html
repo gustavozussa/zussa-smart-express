@@ -4,63 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zussa Smart Express 24h | Bebidas em Maringá</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
-    header { background: #111; color: #fff; padding: 20px; text-align: center; }
-    header h1 { margin: 0; }
-    .container { padding: 20px; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .card { background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .card img { width: 100%; border-radius: 8px; }
-    .card h3 { margin: 10px 0 5px; }
-    .price { color: #27ae60; font-weight: bold; }
-    .btn { background: #25D366; color: #fff; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    body { font-family: 'Poppins', sans-serif; margin: 0; background: #f2f2f2; }
+    header { background: linear-gradient(135deg,#000,#1c1c1c); color: #fff; padding: 30px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 32px; }
+    header p { margin: 8px 0 0; font-size: 16px; opacity: .9; }
+    .alert { background: #ffcc00; color: #000; padding: 12px; text-align: center; font-weight: 600; }
+    .container { padding: 25px; max-width: 1200px; margin: auto; }
+    .hero { background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); margin-bottom:30px; }
+    .hero h2 { margin-top:0; }
+    .hero ul { padding-left:20px; }
+    .controls { display: flex; gap: 12px; margin-bottom: 25px; flex-wrap: wrap; }
+    input, select { padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 15px; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+    .card { background: #fff; border-radius: 14px; padding: 18px; box-shadow: 0 6px 18px rgba(0,0,0,.08); transition:.3s; }
+    .card:hover { transform: translateY(-4px); }
+    .card img { width: 100%; border-radius: 10px; }
+    .card h3 { margin: 12px 0 6px; }
+    .price { color: #27ae60; font-weight: 700; font-size:18px; }
+    .tag { display:inline-block; background:#111; color:#fff; padding:4px 10px; border-radius:20px; font-size:12px; margin-bottom:8px; }
+    .btn { background: #25D366; color: #fff; border: none; padding: 12px; width: 100%; border-radius: 8px; cursor: pointer; font-size: 16px; font-weight:600; margin-top:10px; }
     .btn:hover { background: #1ebe5d; }
-    .info { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-    footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 30px; }
+    .floating { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:15px 18px; border-radius:50px; font-weight:600; text-decoration:none; box-shadow:0 6px 15px rgba(0,0,0,.3); }
+    footer { background: #111; color: #fff; text-align: center; padding: 25px; margin-top: 40px; font-size:14px; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Zussa Smart Express 24h</h1>
-    <p>Bebidas geladas • Pedido via WhatsApp • Maringá</p>
-  </header>
 
-  <div class="container">
-    <div class="info">
-      <h2>📍 Atendimento</h2>
-      <p>Vendemos <strong>todos os tipos de bebidas</strong>, alcoólicas e não alcoólicas.</p>
-      <p>📍 Atendemos exclusivamente <strong>Maringá</strong></p>
-      <p>🕐 Funcionamento <strong>24 horas</strong></p>
-      <p>📲 Pedidos feitos diretamente pelo <strong>WhatsApp</strong></p>
-    </div>
+<header>
+  <h1>Zussa Smart Express 24h</h1>
+  <p>Bebidas geladas • Entrega rápida • Pedido fácil pelo WhatsApp</p>
+</header>
 
-    <h2>Nossas Bebidas</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Cerveja" alt="Cerveja" />
-        <h3>Cerveja Pilsen</h3>
-        <p class="price">R$ 4,99</p>
-        <a class="btn" href="https://wa.me/5544988233217?text=Olá,%20vim%20pelo%20site%20Zussa%20Smart%20Express%2024h" target="_blank">Pedir no WhatsApp</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Refrigerante" alt="Refrigerante" />
-        <h3>Refrigerante Lata</h3>
-        <p class="price">R$ 3,50</p>
-        <a class="btn" href="https://wa.me/5544988233217?text=Olá,%20vim%20pelo%20site%20Zussa%20Smart%20Express%2024h" target="_blank">Pedir no WhatsApp</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200?text=Energetico" alt="Energético" />
-        <h3>Energético</h3>
-        <p class="price">R$ 9,90</p>
-        <a class="btn" href="https://wa.me/5544988233217?text=Olá,%20vim%20pelo%20site%20Zussa%20Smart%20Express%2024h" target="_blank">Pedir no WhatsApp</a>
-      </div>
-    </div>
+<div class="alert">📍 Atendemos exclusivamente Maringá • 🕐 Funcionamento 24 horas</div>
+
+<div class="container">
+
+  <div class="hero">
+    <h2>🔥 Sua bebida gelada em poucos minutos</h2>
+    <p>Trabalhamos com <strong>cervejas, destilados, energéticos, refrigerantes e combos promocionais</strong>. Ideal para festas, churrascos ou aquela resenha de última hora.</p>
+    <ul>
+      <li>✔ Pedido simples pelo WhatsApp</li>
+      <li>✔ Pagamento rápido via Pix</li>
+      <li>✔ Atendimento ágil e confiável</li>
+    </ul>
   </div>
 
-  <footer>
-    <p>© 2026 Zussa Smart Express 24h</p>
-    <p>Venda proibida para menores de 18 anos</p>
-  </footer>
+  <div class="controls">
+    <input type="text" id="search" placeholder="🔍 Buscar bebida..." onkeyup="filterProducts()" />
+    <select id="category" onchange="filterProducts()">
+      <option value="all">Todas categorias</option>
+      <option value="cerveja">Cervejas</option>
+      <option value="whisky">Whiskys</option>
+      <option value="vodka">Vodkas</option>
+      <option value="combo">Combos</option>
+    </select>
+  </div>
+
+  <div class="products" id="products">
+
+    <div class="card" data-name="Heineken" data-category="cerveja">
+      <span class="tag">Cerveja</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Heineken_Logo.svg" />
+      <h3>Heineken Long Neck</h3>
+      <p class="price">R$ 7,99</p>
+      <a class="btn" href="https://wa.me/5544988233217?text=Olá!%20Quero%20pedir%20Heineken%20Long%20Neck.%20Pagamento%20via%20Pix." target="_blank">Pedir no WhatsApp</a>
+    </div>
+
+    <div class="card" data-name="Red Label" data-category="whisky">
+      <span class="tag">Whisky</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Johnnie_Walker_Label.png" />
+      <h3>Johnnie Walker Red Label</h3>
+      <p class="price">R$ 89,90</p>
+      <a class="btn" href="https://wa.me/5544988233217?text=Olá!%20Quero%20pedir%20Whisky%20Red%20Label.%20Pagamento%20via%20Pix." target="_blank">Pedir no WhatsApp</a>
+    </div>
+
+    <div class="card" data-name="Smirnoff" data-category="vodka">
+      <span class="tag">Vodka</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Smirnoff_logo.svg" />
+      <h3>Vodka Smirnoff</h3>
+      <p class="price">R$ 39,90</p>
+      <a class="btn" href="https://wa.me/5544988233217?text=Olá!%20Quero%20pedir%20Vodka%20Smirnoff.%20Pagamento%20via%20Pix." target="_blank">Pedir no WhatsApp</a>
+    </div>
+
+    <div class="card" data-name="Combo Churrasco" data-category="combo">
+      <span class="tag">Combo</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Beer_bottles.jpg" />
+      <h3>Combo Churrasco</h3>
+      <p class="price">R$ 119,90</p>
+      <a class="btn" href="https://wa.me/5544988233217?text=Olá!%20Quero%20pedir%20Combo%20Churrasco.%20Pagamento%20via%20Pix." target="_blank">Pedir no WhatsApp</a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:30px; font-weight:600;">💳 Aceitamos Pix • Entrega rápida • Atendimento profissional</p>
+</div>
+
+<a class="floating" href="https://wa.me/5544988233217" target="_blank">💬 Pedir no WhatsApp</a>
+
+<footer>
+  <p>© 2026 Zussa Smart Express 24h</p>
+  <p>Venda proibida para menores de 18 anos • Consuma com moderação</p>
+</footer>
+
+<script>
+function filterProducts() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const category = document.getElementById('category').value;
+  const products = document.querySelectorAll('.card');
+
+  products.forEach(p => {
+    const name = p.dataset.name.toLowerCase();
+    const cat = p.dataset.category;
+    const matchName = name.includes(search);
+    const matchCat = category === 'all' || category === cat;
+    p.style.display = matchName && matchCat ? 'block' : 'none';
+  });
+}
+</script>
+
 </body>
 </html>
